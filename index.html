@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | [Blogr]</title>
 
@@ -16,6 +19,8 @@
       padding: 0;
       margin: 0;
       width: 100%;
+      font-family: 'Overpass', sans-serif;
+      /* font-family: 'Ubuntu', sans-serif; */
     }
     #sec1{
       width: 100%;
@@ -31,6 +36,53 @@
       margin-top: 5vh;
       margin-left:8vw;
     }
+    .nav-content a{
+      text-decoration: none;
+      color: #000;
+      display: block;
+      line-height: 25pt;
+    }
+    .nav-content a:hover{
+      font-weight: 600;
+    }
+    .nav-content{
+      visibility: hidden;
+      background: #fff;
+      padding: 20px ;
+      width:  100px;
+      margin-top: 10px ;
+      border-radius: 10px;
+    }
+    .btn1 {
+      background: none;
+      border: none;
+      color: rgb(233, 230, 230);
+      font-size: 16px;
+    }
+    .btn1:hover{
+      color: #fff;
+      text-decoration: underline;
+      text-underline-position: auto;
+
+    }
+    .sub-nav{
+      width: 100px;
+      height:  10vh;
+    }
+    .sub-nav:hover .nav-content{
+      visibility: visible;
+    }
+    .sub-nav:hover .btn1{
+      color: #fff;
+      text-decoration: underline;
+      text-underline-position: auto;
+    }
+    .sub-nav{
+      width:100px;
+      margin-left: 300px;
+      margin-top: -30px;
+    }
+
   </style>
 </head>
 <body>
@@ -38,12 +90,16 @@
     <header>
       <div id="logo"><img src="images/logo.svg" alt="logo"></div>
       <nav>
-        <ul>
-          <li><a href="">Product</a></li>
-          <li><a href=""></a>Company</li>
-          <li><a href=""></a>Connect</li>
-        </ul>
-      </nav>
+        <div class="sub-nav">
+        <button class="btn1">Product <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></button>
+        <div class="nav-content">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          </div>
+        </div>
+        </nav>
     </header>
     </div>
 

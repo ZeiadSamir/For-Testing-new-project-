@@ -47,3 +47,42 @@ Background gradient - body:
 
 - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
 - Weights: 400, 500, 700
+
+.btn1{
+      background: none;
+      border: none;
+      color: #fff;
+      display: inline;
+      font-size: 16px;
+      font-family: 'Overpass', sans-serif;
+
+    }
+    .btn1:hover{
+      border-bottom: 1px solid white;
+      transition: .5s;
+    }
+    .nav-content a{
+      text-decoration: none;
+      color: #000;
+      display: block;
+      width: 70px;
+      line-height: 25pt;
+      font-weight: 300;
+    }
+    .nav-content a:hover{
+      font-weight: 600;
+    }
+    .nav-content{
+      visibility: hidden;
+      background: white;
+      width: 110px;
+      height: 160px;
+      border-radius: 5px;
+      padding-top:  20px ;
+      padding-left: 15px;
+      padding-bottom: 20px;
+      margin-top: 10px;
+    }
+    .sub-nav:hover .nav-content{
+      visibility: visible;
+    }
