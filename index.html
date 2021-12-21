@@ -22,6 +22,9 @@
       font-family: 'Overpass', sans-serif;
       /* font-family: 'Ubuntu', sans-serif; */
     }
+
+    /* First second contains header and intro for website */
+
     #sec1{
       width: 100%;
       height: 60vh;
@@ -31,10 +34,76 @@
       background-repeat: no-repeat;
       background-position: left center;
       border-bottom-left-radius: 4vw;
+      overflow: hidden;
+    }
+
+    /* header includes logo and navbar */
+
+    header{
+      width: 100%;
+    white-space: nowrap;
+    }
+
+    #logo{
+      width: 260px;
+      margin-top: 8vh;
+      user-select: none;
     }
     #logo img{
-      margin-top: 5vh;
-      margin-left:8vw;
+      margin-left: 8vw;
+    }
+
+    /* nav bar  */
+    nav{
+    display: inline;
+    margin-top: 1vh;
+    margin-left: 3vw;
+    }
+    /* nav bar items */
+    .sub-nav{
+      width: 100px;
+      height:  10vh;
+      display: inline-block;
+      margin-top: 9vh;
+    }
+    .sub-nav:hover .nav-content{
+      visibility: visible;
+      opacity: 1;
+        height: 130px;
+    }
+    .sub-nav:hover .third-column{
+      visibility: visible;
+      opacity: 1;
+        height: 95px;
+    }
+    .sub-nav:hover .btn1{
+      color: #fff;
+      text-decoration: underline;
+      text-underline-position: auto;
+    }
+
+    .sub-nav:hover .arrow-icon{
+      transform: rotateX(180deg);
+    }
+
+    /* drop down content */
+
+    .nav-content{
+      visibility: hidden;
+      background: #fff;
+      padding: 20px ;
+      width:  100px;
+      margin-top: 10px ;
+      border-radius: 10px;
+      box-shadow: 2px 3px 5px hsl(355, 100%, 74%);
+        opacity: 0;
+        -webkit-transition: .6s ease;
+        -moz-transition: .6s ease;
+        -ms-transition: .6s ease;
+        -o-transition: .6s ease;
+        height: 0;
+        z-index: 1;
+        user-select: none;
     }
     .nav-content a{
       text-decoration: none;
@@ -45,53 +114,118 @@
     .nav-content a:hover{
       font-weight: 600;
     }
-    .nav-content{
-      visibility: hidden;
-      background: #fff;
-      padding: 20px ;
-      width:  100px;
-      margin-top: 10px ;
-      border-radius: 10px;
-    }
+
+    /* nav bar button */
     .btn1 {
       background: none;
       border: none;
       color: rgb(233, 230, 230);
       font-size: 16px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+
     }
     .btn1:hover{
       color: #fff;
       text-decoration: underline;
       text-underline-position: auto;
+    }
+    .btn1:hover .arrow-icon{
+      transform: rotateX(180deg);
+    }
+    .arrow-icon{
+      transition: .6s ease;
+    }
 
+
+    .sub-nav2{
     }
-    .sub-nav{
+    .sub-nav3{
+    }
+    /* grid for the parents elements */
+    .grid-one{
+      display: grid;
+      grid-template-columns: 15vw 70vw 7.5vw 7.5vw;
+    }
+    /* grid for nav elements*/
+    #grid-two{
+      display: grid;
+      grid-template-columns: 5vw 5vw 35vw 5vw 5vw;
+      column-gap: 2vw;
+    }
+    .login-btn{
+      background: none;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 14px;
+      border: none;
+      color: rgb(233, 230, 230);
+      font-weight: 600;
       width: 100px;
-      height:  10vh;
+      height: 35px;
+      margin-top: 9vh;
+      cursor: pointer;
+      transition: .4s ease;
     }
-    .sub-nav:hover .nav-content{
-      visibility: visible;
-    }
-    .sub-nav:hover .btn1{
+    .login-btn:hover{
       color: #fff;
-      text-decoration: underline;
-      text-underline-position: auto;
     }
-    .sub-nav{
-      width:100px;
-      margin-left: 300px;
-      margin-top: -30px;
+    .sign-btn{
+      background: white;
+      border: none;
+      font-size: 14px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 600;
+      color:  #ff3d54;
+      border-radius:  20px;
+      width: 100px;
+      height: 35px;
+      transition: .4s ease;
+      margin-top: 9vh;
+      user-select: none;
+      cursor: pointer;
     }
+    .sign-btn:hover{
+      background: rgba(211, 211, 211, 0.459);
+      color: #fff;
+    }
+    /* .mobile-menu{
+  visibility: hidden;
+} */
+    /* mobile verison menu  */
+    @media only screen and (max-width: 600px) {
+  nav  {
+    visibility: hidden;
+  }
+  .mobile-menu{
+  visibility: visible;
+}
+  .mobile-menu img{
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 8vh;
+    cursor: pointer;
+}
+.close-menu{
+  width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 8vh;
+    cursor: pointer;
+}
+}
 
   </style>
 </head>
 <body>
     <div id="sec1">
-    <header>
-      <div id="logo"><img src="images/logo.svg" alt="logo"></div>
-      <nav>
-        <div class="sub-nav">
-        <button class="btn1">Product <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></button>
+    <header class="grid-one">
+      <div id="logo" class="grid-child1"><img src="images/logo.svg" alt="logo"></div>
+      <nav class="grid-child2" id="grid-two">
+        <div class="sub-nav sub-nav1 child1">
+        <button class="btn1">Product <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></button>
         <div class="nav-content">
           <a href="#">Overview</a>
           <a href="#">Pricing</a>
@@ -99,7 +233,32 @@
           <a href="#">Features</a>
           </div>
         </div>
+        <div class="sub-nav sub-nav2 child2">
+        <button class="btn1">Company <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></button>
+        <div class="nav-content">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          </div>
+        </div>
+        <div class="sub-nav sub-nav3 child3">
+        <button class="btn1">Connect <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></button>
+        <div class="nav-content third-column">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+          </div>
+        </div>
+        <button class="login-btn">Login</button>
+        <button class="sign-btn">Sign Up</button>
         </nav>
+        <div class="mobile-menu">
+          <img src="images/icon-hamburger.svg" alt="Mobile-menu">
+        </div>
+        <div class="close-menu">
+          <img src="images/icon-close.svg" alt="Mobile-menu">
+        </div>
     </header>
     </div>
 
