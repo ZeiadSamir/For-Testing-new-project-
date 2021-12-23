@@ -231,12 +231,15 @@
 .btn-mob{
 background: none;
 border: none;
-color: #000;
+color:  hsl(208, 49%, 24%);
 text-align: center;
 font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
       cursor: pointer;
       user-select: none;
+}
+.btn-mob:hover{
+  color: hsl(355, 100%, 74%);
 }
 #mobile-logo{
 width: 120px;
@@ -263,14 +266,20 @@ grid-template-columns: 85% 15%;
 .mob-nav-content{
   visibility: hidden;
 }
+.mob-nav:hover .btn-mob{
+  color: hsl(355, 100%, 74%);
+}
 .mob-nav:hover .mob-nav-content{
   visibility: visible;
   opacity: 1;
         height: 95px;
 }
+.mob-nav:hover .arr-icon-mob{
+  transform: rotateX(180deg);
+}
 #mob-main-nav {
 background: #fff;
-padding:0 ;
+padding: 0;
 margin: 0;
 margin-left: 5vw;
 margin-left:5vw;
@@ -278,13 +287,16 @@ width: 90vw;
 text-align: center;
 padding-top: 2vh;
 border-radius: 5px;
-display: none;
+opacity: 0;
+height: 0%;
+transition: .6s ease-in-out;
 
 }
 .mob-nav-content {
+  position: relative;
   margin: auto;
   background: grey;
-  width: 50vw;
+  width: 70vw;
   align-items: center;
   line-height: 20pt;
   padding-top: 2vh;
@@ -298,10 +310,18 @@ display: none;
         z-index: 1;
         user-select: none;
         border-radius: 5px;
+
 }
 #close-menu{
   display: none;
 }
+.arr-icon-mob{
+      transition: .6s ease;
+    }
+.btn-mob:hover .arr-icon-mob{
+  transform: rotateX(180deg);
+}
+
 }
 .close-menu{
   visibility: hidden;
@@ -353,29 +373,31 @@ display: none;
     </div>
     <nav id="mob-main-nav">
       <div class="mob-nav">
-        <button class="btn-mob">Product <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
+        <button class="btn-mob">Product <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" class="arr-icon-mob"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
         <div class="mob-nav-content">
           <a href="#">Overview</a>
           <a href="#">Pricing</a>
           <a href="#">Marketplace</a>
           <a href="#">Features</a>
           </div>
-
-        <button class="btn-mob">Company <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
+      </div>
+      <div class="mob-nav">
+        <button class="btn-mob">Company <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" class="arr-icon-mob"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
         <div class="mob-nav-content">
           <a href="#">About</a>
           <a href="#">Team</a>
           <a href="#">Blog</a>
           <a href="#">Careers</a>
           </div>
-        <button class="btn-mob">Connect <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
+        </div>
+        <div class="mob-nav">
+        <button class="btn-mob">Connect <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" class="arr-icon-mob"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
         <div class="mob-nav-content">
           <a href="#">Contact</a>
           <a href="#">Newsletter</a>
           <a href="#">LinkedIn</a>
           </div>
       </div>
-
     </nav>
     </header>
     </div>
