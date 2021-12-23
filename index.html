@@ -229,12 +229,13 @@
 
 }
 .btn-mob{
+  position: relative;
 background: none;
 border: none;
 color:  hsl(208, 49%, 24%);
 text-align: center;
 font-family: 'Ubuntu', sans-serif;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       user-select: none;
 }
@@ -259,9 +260,11 @@ grid-template-columns: 85% 15%;
 .mob-nav-content a{
   display: block;
   text-decoration: none;
-  color: white;
+  color: hsl(208, 49%, 24%);
+  font-weight: 600;
   width: 80px;
   margin: auto;
+  line-height: 25pt;
 }
 .mob-nav-content{
   visibility: hidden;
@@ -272,10 +275,11 @@ grid-template-columns: 85% 15%;
 .mob-nav:hover .mob-nav-content{
   visibility: visible;
   opacity: 1;
-        height: 95px;
+        height: 16vh;
 }
 .mob-nav:hover .arr-icon-mob{
   transform: rotateX(180deg);
+
 }
 #mob-main-nav {
 background: #fff;
@@ -289,18 +293,17 @@ padding-top: 2vh;
 border-radius: 5px;
 opacity: 0;
 height: 0%;
-transition: .6s ease-in-out;
-
+transition: none;
 }
 .mob-nav-content {
   position: relative;
   margin: auto;
-  background: grey;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background: rgb(235, 233, 233);
   width: 70vw;
   align-items: center;
-  line-height: 20pt;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  line-height: 15pt;
   opacity: 0;
         -webkit-transition: .6s ease;
         -moz-transition: .6s ease;
@@ -310,6 +313,7 @@ transition: .6s ease-in-out;
         z-index: 1;
         user-select: none;
         border-radius: 5px;
+        font-size: 14px;
 
 }
 #close-menu{
@@ -321,7 +325,39 @@ transition: .6s ease-in-out;
 .btn-mob:hover .arr-icon-mob{
   transform: rotateX(180deg);
 }
+#mob-main-nav hr{
+  position: relative;
+width: 70vw;
+height: 1px;
+background: hsl(0deg 5% 92%);
+border: none;
+}
+.mob-btn{
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
+  font-family: 'Overpass', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      border: none;
 
+}
+.log {
+  width: 20vw;
+  background:none;
+  color:hsl(208, 49%, 24%);
+}
+.sign{
+  width: 25vw;
+  height: 4vh;
+  color: white;
+  background: rgb(255,143,112);
+background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 59%);
+border-radius: 20px;
+padding-bottom: 1vh;
+padding-top: 1vh;
+}
 }
 .close-menu{
   visibility: hidden;
@@ -398,6 +434,9 @@ transition: .6s ease-in-out;
           <a href="#">LinkedIn</a>
           </div>
       </div>
+      <hr>
+      <button class="mob-btn log">Login</button>
+      <button class="mob-btn sign">Sign Up</button>
     </nav>
     </header>
     </div>
