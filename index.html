@@ -27,14 +27,15 @@
 
     #sec1{
       width: 100%;
-      height: 60vh;
+      height: 80vh;
       background: rgb(255,143,112);
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='3175' height='3174'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.639%25' x2='99.361%25' y1='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF8F71'/%3E%3Cstop offset='100%25' stop-color='%23FF3E55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M1973.15 1193.185v788.41h-786.766v-688.41c0-55.228 44.772-100 100-100h686.767zm-1310.445-1.171c217.26 0 393.383 176.124 393.383 393.383v1.645c0 217.26-176.123 393.383-393.383 393.383S269.322 1804.3 269.322 1587.042v-1.645c0-217.26 176.124-393.383 393.383-393.383zm392.212-926.418v688.41c0 55.23-44.771 100-100 100H268.151v-788.41h786.766zm918.234 0v788.41h-686.767c-55.228 0-100-44.771-100-100v-688.41h786.767z' transform='rotate(22 162.072 2556.164)'/%3E%3C/svg%3E"), linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 75%);
-      background-size: 150%, cover;
+      background-size: 180%, cover;
       background-repeat: no-repeat;
-      background-position: left center;
+      background-position: 25% 50% ;
       border-bottom-left-radius: 4vw;
       overflow: hidden;
+      z-index: 1;
     }
 
     /* header includes logo and navbar */
@@ -203,6 +204,17 @@
       body{
         font-size: 12px;
       }
+      #sec1{
+      width: 100%;
+      height: 60vh;
+      background: rgb(255,61,84);
+      background-image: url("data:image/svg+xml,%3Csvg width='1324' height='1323' viewBox='0 0 1324 1323' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient x1='.695%25' y1='0%25' x2='99.305%25' y2='100%25' id='a'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M821.895188,497.739327 L821.895188,825.739327 L493.895188,825.739327 L493.895188,597.739327 C493.895188,542.510852 538.666713,497.739327 593.895188,497.739327 L821.895188,497.739327 Z M276.655938,496.460979 C367.230637,496.460979 440.655938,569.88628 440.655938,660.460979 C440.655938,751.035678 367.230637,824.460979 276.655938,824.460979 C186.081239,824.460979 112.655938,751.035678 112.655938,660.460979 C112.655938,569.88628 186.081239,496.460979 276.655938,496.460979 Z M822.227687,111.489551 L822.227687,439.489551 L594.227687,439.489551 C538.999212,439.489551 494.227687,394.718026 494.227687,339.489551 L494.227687,339.489551 L494.227687,111.489551 L822.227687,111.489551 Z M440.061253,110.58581 L440.061253,338.58581 C440.061253,393.814285 395.289728,438.58581 340.061253,438.58581 L112.061253,438.58581 L112.061253,110.58581 L440.061253,110.58581 Z' transform='rotate(22 67.652 1066.199)' fill='url(%23a)' fill-rule='evenodd'/%3E%3C/svg%3E"),linear-gradient(0deg, rgba(255,61,84,1) 0%, rgba(255,143,112,1) 100%);
+      background-repeat: no-repeat;
+      background-position:  35% 40% ;
+      background-size: 315%, cover;
+      border-bottom-left-radius: 20vw;
+
+    }
   .mobile-menu{
   visibility: visible;
 }
@@ -225,8 +237,7 @@
   display: block;
   visibility: visible;
   width: 100%;
-  white-space: nowrap;
-
+  position: absolute;
 }
 .btn-mob{
   position: relative;
@@ -238,6 +249,8 @@ font-family: 'Ubuntu', sans-serif;
       font-weight: 600;
       cursor: pointer;
       user-select: none;
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
 }
 .btn-mob:hover{
   color: hsl(355, 100%, 74%);
@@ -265,17 +278,29 @@ grid-template-columns: 85% 15%;
   width: 80px;
   margin: auto;
   line-height: 25pt;
+  -webkit-tap-highlight-color: transparent;
 }
+
 .mob-nav-content{
   visibility: hidden;
 }
 .mob-nav:hover .btn-mob{
   color: hsl(355, 100%, 74%);
 }
+
+
 .mob-nav:hover .mob-nav-content{
   visibility: visible;
   opacity: 1;
-        height: 16vh;
+        height: 150px;
+}
+.third-culomn-mob{
+  margin-bottom:4vh;
+}
+.mob-nav:hover .third-culomn-mob{
+  visibility: visible;
+  opacity: 1;
+        height: 110px;
 }
 .mob-nav:hover .arr-icon-mob{
   transform: rotateX(180deg);
@@ -286,20 +311,20 @@ background: #fff;
 padding: 0;
 margin: 0;
 margin-left: 5vw;
-margin-left:5vw;
+margin-right:5vw;
+margin-top: 3vw;
 width: 90vw;
 text-align: center;
 padding-top: 2vh;
 border-radius: 5px;
-opacity: 0;
-height: 0%;
-transition: none;
+height: 100%;
+display: none;
+box-shadow: 5px 10px 50px 0px rgba(0, 0, 0, 0.37);
 }
 .mob-nav-content {
   position: relative;
   margin: auto;
   margin-top: 2vh;
-  margin-bottom: 2vh;
   background: rgb(235, 233, 233);
   width: 70vw;
   align-items: center;
@@ -313,8 +338,8 @@ transition: none;
         z-index: 1;
         user-select: none;
         border-radius: 5px;
-        font-size: 14px;
-
+        font-size: 16px;
+        padding-top: 1vh;
 }
 #close-menu{
   display: none;
@@ -341,7 +366,7 @@ border: none;
       cursor: pointer;
       user-select: none;
       border: none;
-
+      -webkit-tap-highlight-color: transparent;
 }
 .log {
   width: 20vw;
@@ -362,8 +387,80 @@ padding-top: 1vh;
 .close-menu{
   visibility: hidden;
 }
+.intro{
+  width: 100%;
+  text-align: center;
+  margin-top: 15vh;
+  color: #fff;
+}
 
+.intro h2{
+  font-size: 75px;
+}
+.intro p{
+  margin-top: -3vh;
+  font-size: 20px;
+  color: rgb(224, 221, 221);
+}
+.intro .intro-btn1{
+  width: 120px;
+  height: 40px;
+  background: white;
+      border: none;
+      font-size: 14px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 600;
+      color:  #ff3d54;
+      border-radius:  30px;
+      transition: .4s ease;
+      margin-top: 5vh;
+      margin-right: .5vw ;
+      user-select: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+}
+.intro .intro-btn1:hover{
+  background: rgba(211, 211, 211, 0.459);
+      color: #fff;
+}
+.intro .intro-btn2{
+  width: 120px;
+  height: 40px;
+  border: 1px solid #fff;
+  background: transparent;
+      font-size: 14px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 600;
+      color:  #fff;
+      border-radius:  30px;
+      transition: .4s ease;
+      margin-top: 5vh;
+      user-select: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+}
+.intro .intro-btn2:hover{
+  background: #fff;
+  color:  #ff3d54;
+}
+@media only screen and (max-width:600px) {
+  .intro{
+    margin: auto;
+    margin-top: 20vh;
+    width: 80%;
+  }
+  .intro span{
+display: block;
+  }
+  .intro h2{
+  font-size: 32px;
+}
+.intro p{
+  margin-top: 3vh;
+  font-size: 17px;
+}
 
+}
   </style>
 </head>
 <body>
@@ -428,7 +525,7 @@ padding-top: 1vh;
         </div>
         <div class="mob-nav">
         <button class="btn-mob">Connect <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" class="arr-icon-mob"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg></button>
-        <div class="mob-nav-content">
+        <div class="mob-nav-content third-culomn-mob">
           <a href="#">Contact</a>
           <a href="#">Newsletter</a>
           <a href="#">LinkedIn</a>
@@ -439,12 +536,18 @@ padding-top: 1vh;
       <button class="mob-btn sign">Sign Up</button>
     </nav>
     </header>
+    <div class="intro">
+      <h2> A modern <span> publishing platform</span></h2>
+      <p>Grow your audience and build your online brand</p>
+      <button class="intro-btn1">Start For Free</button>
+      <button class="intro-btn2">Learn More</button>
+    </div>
     </div>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>. -->
-  </div>
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
   <script src="app.js"></script>
 </body>
 </html>
