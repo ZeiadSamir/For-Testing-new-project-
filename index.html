@@ -195,9 +195,7 @@
   display: none;
   visibility: hidden;
 }
-    /* .mobile-menu{
-  visibility: hidden;
-} */
+
     /* mobile verison menu  */
     @media only screen and (max-width: 600px) {
 
@@ -206,7 +204,7 @@
       }
       #sec1{
       width: 100%;
-      height: 70vh;
+      height: 80vh;
       background: rgb(255,61,84);
       background-image: url("data:image/svg+xml,%3Csvg width='1324' height='1323' viewBox='0 0 1324 1323' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient x1='.695%25' y1='0%25' x2='99.305%25' y2='100%25' id='a'%3E%3Cstop stop-color='%23FF8F71' offset='0%25'/%3E%3Cstop stop-color='%23FF3E55' offset='100%25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M821.895188,497.739327 L821.895188,825.739327 L493.895188,825.739327 L493.895188,597.739327 C493.895188,542.510852 538.666713,497.739327 593.895188,497.739327 L821.895188,497.739327 Z M276.655938,496.460979 C367.230637,496.460979 440.655938,569.88628 440.655938,660.460979 C440.655938,751.035678 367.230637,824.460979 276.655938,824.460979 C186.081239,824.460979 112.655938,751.035678 112.655938,660.460979 C112.655938,569.88628 186.081239,496.460979 276.655938,496.460979 Z M822.227687,111.489551 L822.227687,439.489551 L594.227687,439.489551 C538.999212,439.489551 494.227687,394.718026 494.227687,339.489551 L494.227687,339.489551 L494.227687,111.489551 L822.227687,111.489551 Z M440.061253,110.58581 L440.061253,338.58581 C440.061253,393.814285 395.289728,438.58581 340.061253,438.58581 L112.061253,438.58581 L112.061253,110.58581 L440.061253,110.58581 Z' transform='rotate(22 67.652 1066.199)' fill='url(%23a)' fill-rule='evenodd'/%3E%3C/svg%3E"),linear-gradient(0deg, rgba(255,61,84,1) 0%, rgba(255,143,112,1) 100%);
       background-repeat: no-repeat;
@@ -723,18 +721,27 @@ footer span{
 }
 }
 .attribution {
-  margin-top: 5vh;
-    height: 40px;
+  text-align: center;
+  margin-top: 1vh;
+    height: 20px;
     font-size: 17px;
     text-align: center;
+    margin-bottom: 1vh;
 }
     .attribution a {
       color: hsl(228, 45%, 44%);
-      font-size: 17px;
+      font-size: 27px;
     }
     .myname{
       font-size: 24px;
-  font-family: 'Italianno', cursive;;
+  font-family: 'Italianno', cursive;
+    }
+    @media only screen and (max-width:600px){
+      .attribution a {
+      color: hsl(228, 45%, 44%);
+      font-size: 27px;
+    }
+
     }
   </style>
 </head>
@@ -890,8 +897,7 @@ footer span{
     </footer>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#" class="myname">Zeiad Samir</a>.
+    Design And Code By <a href="#" class="myname">Zeiad Samir</a>.
   </div>
   <script src="app.js"></script>
 </body>

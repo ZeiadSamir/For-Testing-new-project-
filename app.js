@@ -15,3 +15,9 @@ function closeNav(){
 }
 closeNav();
 
+function alerting(){
+    document.getElementsByTagName('a')[0].addEventListener('click', function(){
+        alert('this website for testing developer skills');
+    })
+}
+alerting();
