@@ -15,9 +15,34 @@ function closeNav(){
 }
 closeNav();
 
-function alerting(){
-    document.getElementsByTagName('a')[0].addEventListener('click', function(){
-        alert('this website for testing developer skills');
-    })
+// function alerting(){
+//     document.getElementsByTagName('a')[0].addEventListener('click', function(){
+//         alert('this website for testing developer skills');
+//     })
+// }
+// alerting();
+
+const links =  document.getElementsByTagName('a');
+// console.log(links)
+// function alerting(){
+// links.forEach(function (link) {
+//     link.addEventListener('click', function(){
+//         alert('this website for testing developer skills');
+//     });
+//     return
+// });
+// }
+// alerting();
+
+
+
+for(var i = 0; i<links.length; i++){
+    links[i].addEventListener("click", clicked(i));
+
 }
-alerting();
+
+function clicked(i){
+    return function(){
+        alert('you clicked ' + (links[i].innerText) + " "+'button');
+    }
+}
