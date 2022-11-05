@@ -38,11 +38,33 @@ const links =  document.getElementsByTagName('a');
 
 for(var i = 0; i<links.length; i++){
     links[i].addEventListener("click", clicked(i));
-
 }
 
 function clicked(i){
     return function(){
-        alert('you clicked ' + (links[i].innerText) + " "+'button');
+        // alert('you clicked ' + (links[i].innerText) + " "+'button');
+        alert(`
+
+BUTTONS HERE ARE JUST IMAGINARY THING.
+
+This Landing Page Is For Showing Developer Skills In Web Design
+
+thanks for understanding.
+
+you've clicked "${links[i].innerText}" button
+`)
     }
 }
+
+function alreadyClicked(){
+    alert(`
+
+    BUTTONS HERE ARE JUST IMAGINARY THING.
+
+    This Landing Page Is For Showing Developer Skills In Web Design
+
+    thanks for understanding.`)
+}
+
+// const btns = document.getElementById('intro-btn1');
+
